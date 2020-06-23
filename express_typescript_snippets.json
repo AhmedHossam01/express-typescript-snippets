@@ -1,0 +1,45 @@
+{
+  "express router": {
+    "prefix": "newRouter",
+    "body": [
+      "import { Router } from \"express\";",
+      "",
+      "const router = Router();",
+      "",
+      "// ANCHOR: Controllers",
+      "router.get(\"/\", () => {});",
+      "",
+      "export default router;",
+      ""
+    ],
+    "description": "new router express"
+  },
+  "newController": {
+    "prefix": "newController",
+    "body": [
+      "import { Request, Response, NextFunction } from \"express\";",
+      "",
+      "const ${1}Controller = (",
+      "  req: Request,",
+      "  res: Response,",
+      "  next: NextFunction",
+      ") => {};",
+      "",
+      "export default ${1}Controller;",
+      ""
+    ],
+    "description": "new express controller"
+  },
+  "newMongooseModel": {
+    "prefix": "newMongooseSchema",
+    "body": [
+      "import mongoose from \"mongoose\";",
+      "",
+      "const ${1}Schema = new mongoose.Schema({});",
+      "",
+      "export default mongoose.model(\"${1}\", ${1}Schema);",
+      ""
+    ],
+    "description": "new mongoose schema"
+  }
+}
